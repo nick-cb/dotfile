@@ -128,3 +128,4 @@ fi
 if [ -d "$HOME/.local/share/mongodb/bin" ]; then
   PATH="$HOME/.local/share/mongodb/bin:$PATH"
 fi
+. "/Users/nick/.local/share/cargo/env"
