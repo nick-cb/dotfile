@@ -33,14 +33,20 @@ plugins=(
 	# vi-mode
 )
 
-ZSH_DISABLE_COMPFIX=true
+# ZSH_DISABLE_COMPFIX=true
+# ZSH_HIGHLIGHT_STYLES[builtin]='fg=blue'
+# ZSH_HIGHLIGHT_STYLES[function]='fg=blue'
+# ZSH_HIGHLIGHT_STYLES[alias]='fg=blue'
+# ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=blue'
+# ZSH_HIGHLIGHT_STYLES[precommand]='fg=blue'
+# ZSH_HIGHLIGHT_STYLES[command]='fg=blue'
 #ufetch
 alias ls='eza -l --icons --group-directories-first'
 alias la='eza -la --icons --group-directories-first'
 alias shutdown='systemctl poweroff -i'
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
-alias cat='bat'
+# alias cat='bat'
 alias neovide='/Applications/neovide.app/Contents/MacOS/neovide'
 # alias lvim="alacritty msg config window.padding.x=0 window.padding.y=0 && lvim"
 
@@ -120,3 +126,15 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 eval "$(starship init zsh)"
 export REACT_EDITOR=nvim
 set -o AUTO_CD
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="$PATH:$HOME/Library/Python/3.9/bin"
+
+# Amp CLI
+export PATH="/Users/nick/.amp/bin:$PATH"
+
+# opencode
+export PATH=/Users/nick/.opencode/bin:$PATH
+
+. "$HOME/.local/share/../bin/env"

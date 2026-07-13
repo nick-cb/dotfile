@@ -10,14 +10,14 @@ export THEME="dark"
 export HISTFILE=~/.zsh_history
 export HISTSIZE=10000
 export SAVEHIST=10000
-export JAVA_HOME="$HOME/Library/Java/JavaVirtualMachines/openjdk-21/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-24.jdk/Contents/Home/"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
-export REPO_OS_OVERRIDE='linux'
 export PROJECT='$HOME/Documents/projects'
 export ANDROID_HOME="$HOME/Library/Android/sdk"
+export NDK_HOME="$HOME/Library/Android/sdk/ndk/29.0.14206865/"
 # export HISTFILE="${XDG_STATE_HOME}"/bash/history
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
@@ -129,3 +129,5 @@ if [ -d "$HOME/.local/share/mongodb/bin" ]; then
   PATH="$HOME/.local/share/mongodb/bin:$PATH"
 fi
 . "/Users/nick/.local/share/cargo/env"
+
+. "$HOME/.local/share/../bin/env"
